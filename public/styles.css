@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 380px;
+    height: 680px;
+    background-color: #1e1e1e;
+    border-radius: 24px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.mascot-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    position: relative;
+}
+
+.speech-bubble {
+    background-color: #ffffff;
+    color: #000;
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 13px;
+    margin-bottom: 10px;
+    max-width: 85%;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mascot-image {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.15s ease-in-out;
+}
+
+.interaction-menu {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu-btn {
+    background: #333;
+    color: #fff;
+    border: 1px solid #555;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.chat-input-area {
+    margin: 10px 0;
+}
+
+#chatForm {
+    display: flex;
+    gap: 8px;
+}
+
+#userMessageInput {
+    flex: 1;
+    background: #2a2a2a;
+    border: 1px solid #444;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 13px;
+    outline: none;
+}
+
+#userMessageInput:focus {
+    border-color: #ff6b81;
+}
+
+#sendBtn {
+    background: #ff6b81;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background 0.2s;
+}
+
+#sendBtn:hover {
+    background: #ff4757;
+}
+
+.controls-area {
+    background-color: #2a2a2a;
+    padding: 12px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.control-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+
+select {
+    background: #404040;
+    color: #fff;
+    border: none;
+    padding: 6px;
+    border-radius: 6px;
+}

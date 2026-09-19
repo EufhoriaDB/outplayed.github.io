@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mascota Virtual - Illyana AI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="app-container">
+    <!-- ÁREA DE LA MASCOTA -->
+    <div class="mascot-area">
+        <div class="speech-bubble" id="dialogueBox">
+            ¡Hola, Blush! ¿De qué quieres hablar hoy?
+        </div>
+        
+        <img src="assets/imagen_1.webp" alt="Illyana" class="mascot-image" id="mascotSprite" onclick="touchMascot()">
+
+        <!-- BOTONES RÁPIDOS -->
+        <div class="interaction-menu" id="interactionMenu">
+            <button class="menu-btn" onclick="speak('carino')">💗 Cariño</button>
+            <button class="menu-btn" onclick="speak('que_hace')">❓ ¿Qué hace?</button>
+            <button class="menu-btn" onclick="speak('descansar')">💤 Descansar</button>
+        </div>
+    </div>
+
+    <!-- SECCIÓN DE CHAT LIBRE -->
+    <div class="chat-input-area">
+        <form id="chatForm" onsubmit="enviarMensajeChat(event)">
+            <input type="text" id="userMessageInput" placeholder="Escríbele algo a Illyana..." autocomplete="off">
+            <button type="submit" id="sendBtn">Enviar</button>
+        </form>
+    </div>
+
+    <!-- SELECCIÓN DE ÁNIMO -->
+    <div class="controls-area">
+        <div class="control-row">
+            <label for="stateSelect">Ánimo de Illyana:</label>
+            <select id="stateSelect" onchange="changeState(this.value)">
+                <option value="carinosa">🌸 Cariñosa</option>
+                <option value="feliz">☀️ Feliz</option>
+                <option value="somnolienta">💤 Somnolienta</option>
+                <option value="mimosa">💗 Mimosa</option>
+                <option value="juguetona">😼 Juguetona</option>
+                <option value="necesitada">🥺 Necesitada</option>
+                <option value="melancolica">🌧️ Melancólica</option>
+                <option value="molesta">😤 Molesta</option>
+                <option value="timida">😳 Tímida</option>
+                <option value="concentrada">🧠 Concentrada</option>
+                <option value="motivada">🏋️ Motivada</option>
+                <option value="ocupada">💼 Ocupada</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
